@@ -1,0 +1,25 @@
+extend layout
+
+block content
+  p
+    | Upload CSV file, It's return JSON Object
+    | The purpose of this program to uplaod csv file,
+    | read this csv file in to server and create JSON 
+    | object without storing CSV file in to any location.
+    
+  form(action="/upload", method="post", enctype="multipart/form-data")
+    input(type="file", multiple, accept=".csv" name="csv")
+    button(class="button" type="submit", value="Upload")
+      span Upload File
+
+block sidebar
+  .widget
+    h1 Widget
+    p
+      | Use created JSON object according to your requirment
+      | eg. Store it in DB or do some other functionalities
+    
+    p
+      | Keep enjoy and create bug report if any error is
+      | remaining in my code. Thanks :)
+
